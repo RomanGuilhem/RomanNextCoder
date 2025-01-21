@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "chakra": "^0.0.3",
+    "next": "^15.1.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.83.4",
+    "vite": "^6.0.7"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  }
+}
