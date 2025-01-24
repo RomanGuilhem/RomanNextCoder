@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Flex,
   Circle,
@@ -8,12 +10,9 @@ import {
   Icon,
   chakra,
   Tooltip,
-  Text,
 } from "@chakra-ui/react";
-import { wrap } from "framer-motion";
-import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 import { IoIosCart } from "react-icons/io";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export const Item = ({ item }) => {
   return (
@@ -27,20 +26,10 @@ export const Item = ({ item }) => {
         position="relative"
       >
         {item.isNew && (
-          <Circle
-            size="10px"
-            position="absolute"
-            top={2}
-            right={2}
-            bg="red.200"
-          />
+          <Circle size="10px" position="absolute" top={2} right={2} bg="red.200" />
         )}
 
-        <Image
-          src={item.thumbnail}
-          alt={`Picture of ${item.images}`}
-          roundedTop="lg"
-        />
+        <Image src={item.thumbnail} alt={`Picture of ${item.images}`} roundedTop="lg" />
 
         <Box p="6">
           <Box display="flex" alignItems="baseline">
@@ -52,13 +41,7 @@ export const Item = ({ item }) => {
           </Box>
 
           <Flex mt="1" justifyContent="space-between" alignContent="center">
-            <Box
-              fontSize="xl"
-              fontWeight="semibold"
-              as="h4"
-              lineHeight="tight"
-              isTruncated
-            >
+            <Box fontSize="xl" fontWeight="semibold" as="h4" lineHeight="tight" isTruncated>
               {item.title}
             </Box>
             <Tooltip
@@ -68,9 +51,11 @@ export const Item = ({ item }) => {
               color={"gray.800"}
               fontSize={"1.2em"}
             >
-              <chakra.a href={`/item/${item.id}`} display={"flex"}>
-                <Icon as={IoIosCart} h={7} w={7} alignSelf={"center"} />
-              </chakra.a>
+              <Link href={`/item/${item.id}`} passHref>
+                <chakra.a display={"flex"}>
+                  <Icon as={IoIosCart} h={7} w={7} alignSelf={"center"} />
+                </chakra.a>
+              </Link>
             </Tooltip>
           </Flex>
 
@@ -92,12 +77,15 @@ export const Item = ({ item }) => {
 };
 
 export const ItemListContainer = ({ products = [] }) => {
-    return (
-      <Flex wrap={"wrap"}>
-        {products.map((item) => {
+  return (
+    <Flex wrap={"wrap"}>
+      {products.length > 0 ? (
+        products.map((item) => {
           return <Item key={item.id} item={item} />;
-        })}
-      </Flex>
-    );
-  };
-  
+        })
+      ) : (
+        <Box>No hay productos disponibles.</Box>
+      )}
+    </Flex>
+  );
+};
