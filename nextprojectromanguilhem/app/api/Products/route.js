@@ -1,5 +1,5 @@
 export const fetchProductos = async () => {
-    const response = await fetch('/api/productos'); // Ajusta la ruta según tu API
+    const response = await fetch('/api/productos'); 
     if (!response.ok) {
         throw new Error('Error al obtener los productos');
     }
