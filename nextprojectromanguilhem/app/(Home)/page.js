@@ -1,6 +1,6 @@
 import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { fetchProductos } from "@/utils/api"; // Asegúrate de crear esta función para obtener productos
+import { fetchProductos } from "@/utils/api"; 
 
 export const Home = () => {
     const [productos, setProductos] = useState([]);
@@ -10,7 +10,7 @@ export const Home = () => {
     useEffect(() => {
         const loadProductos = async () => {
             try {
-                const data = await fetchProductos(); // Llama a la función que obtiene los productos
+                const data = await fetchProductos(); 
                 setProductos(data);
             } catch (err) {
                 setError("Error al cargar los productos");
