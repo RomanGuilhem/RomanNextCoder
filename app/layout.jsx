@@ -1,11 +1,12 @@
-import { Box } from "@chakra-ui/react";
+"use client";
+import { ChakraProvider } from "@chakra-ui/react";
 
-const MainLayout = ({ children }) => {
-    return (
-        <Box>
-            {children}
-        </Box>
-    );
-};
-
-export default MainLayout;
+export default function RootLayout({ children }) {
+  return (
+    <html lang="es">
+      <body>
+        <ChakraProvider>{children}</ChakraProvider>
+      </body>
+    </html>
+  );
+}

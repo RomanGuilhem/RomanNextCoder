@@ -1,14 +1,14 @@
-export async function getProducts() {
-    try{
-    const url = categoria
-    ?"https://dummyjson.com/products/category/" + categoria
-    :"https://dummyjson.com/products"
+export async function getProducts(categoria = "") {
+    try {
+        const url = categoria
+            ? `https://dummyjson.com/products/category/${categoria}`
+            : "https://dummyjson.com/products";
 
-    const data = await fetch (url)
-    const { products } = await data.json()
-    return products
-
-} catch (error) {
-    console.error(error);
-    
-}}
+        const response = await fetch(url);
+        const { products } = await response.json();
+        return products;
+    } catch (error) {
+        console.error("Error al obtener productos:", error);
+        return [];
+    }
+}

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { IoIosCart } from "react-icons/io";
-import { CartContext } from "../../../context";
+import { CartContext } from "../../context/CartContext";
 import Link from "next/link";
 
 

@@ -14,7 +14,8 @@ import {
 } from "@chakra-ui/react";
 import { useContext, useState } from "react";
 import { MdLocalShipping } from "react-icons/md";
-import { CartContext } from "../../context";
+import { CartContext } from "../../context/CartContext";
+
 
 export const ItemDetailContainer = ({ item }) => {
   const [count, setCount] = useState(0);
