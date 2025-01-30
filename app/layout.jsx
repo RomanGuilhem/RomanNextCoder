@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
 
-const Layout = ({ children }) => {
+const MainLayout = ({ children }) => {
     return (
         <Box>
             {children}
@@ -8,4 +8,4 @@ const Layout = ({ children }) => {
     );
 };
 
-export default Layout;
+export default MainLayout;
