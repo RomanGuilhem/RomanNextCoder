@@ -1,4 +1,5 @@
 import { Flex, Spinner, Text, VisuallyHidden } from "@chakra-ui/react";
+import Link from "next/link";
 
 export const Loader = ({ 
   size = "xl", 

@@ -1,3 +1,4 @@
+"use client"
 import {
   Box,
   Container,
@@ -14,8 +15,8 @@ import {
 } from "@chakra-ui/react";
 import { useContext, useState } from "react";
 import { MdLocalShipping } from "react-icons/md";
-import { CartContext } from "../../../context/CartContext";
-
+import { CartContext } from "../../../../context/CartContext";
+import Link from "next/link";
 
 export const ItemDetailContainer = ({ item }) => {
   const [count, setCount] = useState(0);

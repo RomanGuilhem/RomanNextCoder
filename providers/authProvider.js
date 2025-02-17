@@ -2,6 +2,7 @@
 import { auth } from "@/firebase";
 import { onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
+import Link from "next/link";   
 
 export const AuthContext = createContext();
 

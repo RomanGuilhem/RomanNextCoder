@@ -1,5 +1,7 @@
+"use client"
 import { useEffect, useState } from "react";
 import { Flex, Button, Text } from "@chakra-ui/react";
+import Link from "next/link";
 
 const ItemCount = () => {
   const [count, setCount] = useState(0);

@@ -1,9 +1,10 @@
 "use client";
 import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { fetchProductos } from "../utils/api"; 
+import { fetchProductos } from "../../../utils/api"; 
+import Link from "next/link";
 
-const Home = () => {
+export const Home = () => {
     const [productos, setProductos] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -43,4 +44,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+
