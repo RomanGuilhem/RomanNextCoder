@@ -1,6 +1,5 @@
 import { Box, Flex, Icon, Link } from "@chakra-ui/react";
 import { FaLinkedin, FaXTwitter, FaYoutube, FaFacebook, FaInstagram } from "react-icons/fa6";
-import Link from "next/link"; 
 
 function Footer() {
   return (

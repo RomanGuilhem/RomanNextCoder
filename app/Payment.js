@@ -5,6 +5,7 @@ import { CartContext } from "../context";
 import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
 import Swal from "sweetalert2";
+import Link from "next/link";
 
 export const Payment = () => {
   const [name, setName] = useState("");

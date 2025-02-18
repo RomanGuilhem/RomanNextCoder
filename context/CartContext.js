@@ -2,6 +2,7 @@
 import { createContext, useState } from "react";
 
 export const CartContext = createContext();
+import Link from "next/link";
 
 export const CartProvider = ({ children }) => {
   const [cartState, setCartState] = useState([]);

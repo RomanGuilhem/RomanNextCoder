@@ -1,7 +1,7 @@
 "use client";
 import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { fetchProductos } from "../../../utils/api"; 
+import { fetchProductos } from "../utils/api"; 
 import Link from "next/link";
 
 export const Home = () => {

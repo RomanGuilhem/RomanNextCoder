@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
-import { db } from "../firebase";
+import { db } from "../../firebase";
 
 export const useItemById = (id) => {
     const [product, setProduct] = useState({});

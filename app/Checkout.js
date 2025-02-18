@@ -17,6 +17,7 @@ import {
 } from "@chakra-ui/react";
 import { MinusIcon, AddIcon, DeleteIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router";
+import Link from "next/link";
 
 
 export const Checkout = () => {

@@ -20,9 +20,9 @@ import {
   import { CartWidget } from "../CartWidget/CartWidget";
   import { CiCoffeeBean } from "react-icons/ci";
   import Link from "next/link";
-  import { useItems } from "../../hooks";
+  import { useItems } from "../../nextprojectromanguilhem/hooks";
   
-  export const NavBar = () => {
+  const NavBar = () => {
     const { colorMode, toggleColorMode } = useColorMode();
     const { isOpen, onOpen, onClose } = useDisclosure();
     const { itemsData = [] } = useItems("categories");
@@ -87,3 +87,4 @@ import {
     );
   };
   
+  export default NavBar;
