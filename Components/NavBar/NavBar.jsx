@@ -30,7 +30,7 @@ import {
     return (
       <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-          <Link to="/">
+          <Link href="/">
             <Box>
               <CiCoffeeBean style={{ fontSize: "30px" }} />
             </Box>
@@ -43,7 +43,7 @@ import {
               {itemsData.length > 0 ? (
                 itemsData.map((category) => (
                   <MenuItem key={category.slug}>
-                    <Link to={`/category/${category.slug}`}>{category.name}</Link>
+                    <Link href={`/category/${category.slug}`}>{category.name}</Link>
                   </MenuItem>
                 ))
               ) : (
@@ -75,7 +75,7 @@ import {
                     <Text fontSize="lg" fontWeight="bold">ADMIN</Text>
                   </Center>
                   <MenuDivider />
-                  <Link to="/"><MenuItem>Inicio</MenuItem></Link>
+                  <Link href="/"><MenuItem>Inicio</MenuItem></Link>
                   <MenuItem>Ajustes</MenuItem>
                   <MenuItem>Cerrar sesión</MenuItem>
                 </MenuList>
