@@ -20,7 +20,8 @@ import {
   import { CartWidget } from "../CartWidget/CartWidget";
   import { CiCoffeeBean } from "react-icons/ci";
   import Link from "next/link";
-  import { useItems } from "../../nextprojectromanguilhem/hooks";
+  import { useItems } from "../../hooks";
+import { createProductsFirestore } from "@/app/helpers";
   
   const NavBar = () => {
     const { colorMode, toggleColorMode } = useColorMode();
@@ -51,6 +52,7 @@ import {
               )}
             </MenuList>
           </Menu>
+          <Button onClick={() => {createProductsFirestore("products")}}>Crear productos</Button>
           <Flex alignItems={"center"}>
             <CartWidget />
             <Stack direction={"row"} spacing={7}>

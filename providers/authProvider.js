@@ -1,5 +1,5 @@
 "use client";
-import { auth } from "@/firebase";
+import { auth } from "@/Firebase/firebase";
 import { onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import Link from "next/link";   

@@ -2,7 +2,7 @@
 import React, { useContext, useState } from "react";
 import { Flex, Button, Input, Heading, Stack } from "@chakra-ui/react";
 import { CartContext } from "../context";
-import { db } from "../firebase";
+import { db } from "../Firebase/firebase";
 import { collection, addDoc } from "firebase/firestore";
 import Swal from "sweetalert2";
 import Link from "next/link";
