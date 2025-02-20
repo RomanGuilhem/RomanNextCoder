@@ -7,7 +7,7 @@ import { collection, addDoc } from "firebase/firestore";
 import Swal from "sweetalert2";
 import Link from "next/link";
 
-export const Payment = () => {
+const Payment = () => {
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -107,3 +107,5 @@ export const Payment = () => {
 
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+export default Payment;

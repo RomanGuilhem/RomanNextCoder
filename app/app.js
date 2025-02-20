@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { fetchProductos } from "../utils/api"; 
 import Link from "next/link";
 
-export const Home = () => {
+const Home = () => {
     const [productos, setProductos] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -45,3 +45,4 @@ export const Home = () => {
 };
 
 
+export default Home;

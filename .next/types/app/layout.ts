@@ -1,4 +1,4 @@
-// File: C:\Roman Importantes\CoderHouse\Next\nextprojectromanguilhem\app\layout.js
+// File: C:\Roman Importantes\CoderHouse\Next\app\layout.js
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

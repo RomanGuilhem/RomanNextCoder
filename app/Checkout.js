@@ -20,7 +20,7 @@ import { useNavigate } from "react-router";
 import Link from "next/link";
 
 
-export const Checkout = () => {
+const Checkout = () => {
   const { cartState, addItem, removeItem, deleteItem } =
     useContext(CartContext);
 
@@ -122,3 +122,5 @@ export const Checkout = () => {
     </Box>
   );
 };
+
+export default Checkout;
