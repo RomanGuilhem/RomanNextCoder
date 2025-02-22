@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { db } from "../Firebase/firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
 
-export const useItemsByCategory = (categoryId) => {
+const useItemsByCategory = (categoryId) => {
     const [productsData, setProductsData] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -23,3 +23,5 @@ export const useItemsByCategory = (categoryId) => {
     }, [categoryId]);
     return { productsData, loading };
 };
+
+export default useItemsByCategory;

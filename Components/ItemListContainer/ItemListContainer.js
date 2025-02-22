@@ -61,7 +61,7 @@ export const Item = ({ item }) => {
   );
 };
 
-export const ItemListContainer = ({ products = [] }) => {
+const ItemListContainer = ({ products = [] }) => {
   return (
     <Flex wrap="wrap">
       {Array.isArray(products) && products.length ? (
@@ -72,3 +72,5 @@ export const ItemListContainer = ({ products = [] }) => {
     </Flex>
   );
 };
+
+export default ItemListContainer;

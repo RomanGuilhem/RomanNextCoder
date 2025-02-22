@@ -1,10 +1,11 @@
 "use client"
 import { createContext, useState } from "react";
-
-export const CartContext = createContext();
 import Link from "next/link";
 
-export const CartProvider = ({ children }) => {
+const CartContext = createContext();
+
+
+const CartProvider = ({ children }) => {
   const [cartState, setCartState] = useState([]);
 
   const addItem = (product, qtyItem) => {
@@ -52,3 +53,5 @@ export const CartProvider = ({ children }) => {
     </CartContext.Provider>
   );
 };
+
+export default {CartContext, CartProvider};    

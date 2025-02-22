@@ -504,9 +504,6 @@ video {
 .flex {
   display: flex;
 }
-.hidden {
-  display: none;
-}
 .rounded {
   border-radius: 0.25rem;
 }

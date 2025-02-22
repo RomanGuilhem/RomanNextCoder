@@ -1,7 +1,7 @@
 import { Flex, Spinner, Text, VisuallyHidden } from "@chakra-ui/react";
 import Link from "next/link";
 
-export const Loader = ({ 
+const Loader = ({ 
   size = "xl", 
   color = "blue.500", 
   message = "Cargando...", 
@@ -31,3 +31,5 @@ export const Loader = ({
     </Flex>
   );
 };
+
+export default Loader;

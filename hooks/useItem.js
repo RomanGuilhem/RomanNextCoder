@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../Firebase/firebase";
 
-export const useItems = (collectionname) => {
+const useItems = (collectionname) => {
   const [itemsData, setItemsData] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -20,3 +20,5 @@ export const useItems = (collectionname) => {
 
   return { itemsData, loading };
 };
+
+export default useItems;

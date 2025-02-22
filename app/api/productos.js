@@ -2,7 +2,7 @@ import { db } from "../../../Firebase";
 import { collection, getDocs, where, query, addDoc } from "firebase/firestore";
 import { NextResponse } from "next/server";
 
-export async function GET(request) {
+async function GET(request) {
     const searchParams = request.nextUrl.searchParams;
     const categoria = searchParams.get("categoria");
 
@@ -57,3 +57,5 @@ export async function POST(req) {
         });
     }
 }
+
+export default { GET, POST };

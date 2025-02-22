@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { IoIosCart } from "react-icons/io";
-import { CartContext } from "../../context/CartContext";
+import CartContext from "../../context/CartContext";
 import Link from "next/link";
 
 
-export const CartWidget = () => {
+const CartWidget = () => {
   const { cartState } = useContext(CartContext);
 
   console.log(cartState);
@@ -26,3 +26,5 @@ export const CartWidget = () => {
     </Link>
   );
 };
+
+export default CartWidget;  

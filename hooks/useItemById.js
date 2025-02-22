@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../Firebase/firebase";
 
-export const useItemById = (id) => {
+const useItemById = (id) => {
     const [product, setProduct] = useState({});
     const [loading, setLoading] = useState(true);
 
@@ -18,3 +18,5 @@ export const useItemById = (id) => {
 
     return { product, loading };
 };
+
+export default useItemById;

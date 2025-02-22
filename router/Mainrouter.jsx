@@ -1,15 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import {
-  Category,
-  Checkout,
-  Home,
-  ItemDetail,
-  NotFound,
-  Payment,
-} from "../pages";
-import { NavBar } from "../components/NavBar/NavBar";
+import Category from "../pages/category";
+import Checkout from "../pages/checkout";
+import Home from "../pages/index";
+import  ItemDetail from "../pages/itemDetail";
+import  NotFound from "../pages/404";
+import  Payment from "../pages/payment";
+import NavBar from "../components/NavBar";
 
-export const MainRouter = () => {
+const MainRouter = () => {
   return (
     <Router>
       <NavBar />
@@ -24,3 +22,5 @@ export const MainRouter = () => {
     </Router>
   );
 };
+
+export default MainRouter;
