@@ -1,8 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-/**  appDir: true, */
-  },
+  reactStrictMode: true,
+  images : {
+      remotePatterns : [
+          {
+              hostname : "cdn.dummyjson.com"
+          }
+      ]
+  }
 };
 
 export default nextConfig;

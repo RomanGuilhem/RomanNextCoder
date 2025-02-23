@@ -6,7 +6,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyBbV0SzzVgUJSAOUQUSEaojyQcd5yFtxJE",
   authDomain: "nextromancoderproyectofinal.firebaseapp.com",
   projectId: "nextromancoderproyectofinal",
-  storageBucket: "nextromancoderproyectofinal.firebasestorage.app",
+  storageBucket: "nextromancoderproyectofinal.appspot.com",
   messagingSenderId: "1034634294593",
   appId: "1:1034634294593:web:f07b341b23670564bf1dc0"
 };
